@@ -1,0 +1,87 @@
+\documentclass[10pt,twoside,openright]{memoir} %print format
+%\documentclass[10pt,ebook,oneside,openany]{memoir} %ebook format
+%pick 1 of the above documentclasses
+
+\usepackage{graphicx} %must load this before setting geometry
+\graphicspath{ {img/}}
+\usepackage[paperwidth=5.0in, paperheight=8.0in,bindingoffset=.50in,bmargin=.75in]{geometry} %page size
+
+\usepackage{bookman} %Font
+\usepackage{upquote} %for single comments
+
+\usepackage{blindtext}  %for dummy text
+\usepackage[protrusion=true,expansion=true]{microtype}
+
+%\checkandfixthelayout
+
+\usepackage{titlesec}
+
+\createmark{chapter}{both}{nonumber}{}{}
+
+\makepagestyle{right}
+\makeoddhead{right}{\footnotesize First Last}{}{\footnotesize \thepage}
+\makeevenhead{right}{\footnotesize \thepage}{}{\footnotesize Title}
+
+
+
+\title{TITLE}
+\author{FIRST LAST}
+
+%% BEGIN TITLE
+
+\makeatletter
+\def\maketitle{%
+  \null
+  \thispagestyle{empty}%
+  \vfill
+  \begin{center}\leavevmode
+    \normalfont
+    {\Huge\raggedleft \@title\par}%
+    \hrulefill\par
+    {\Large\raggedright Book 1. Subtitle\par}%
+    \vskip 5cm
+    {\Huge \@author\par}%
+  \end{center}%
+  \vfill
+  \null
+  \cleardoublepage
+  }
+\makeatother
+\author{First Last}
+\title{Title}
+
+
+\date{}
+
+%%% BEGIN DOCUMENT
+
+\begin{document}
+
+\let\cleardoublepage\clearpage
+
+\maketitle
+
+\input{frontmatter.tex} 
+
+\frontmatter
+
+
+
+
+\mainmatter
+\sloppy
+\pagestyle{right}
+%Save book text to external files and import them, so things stay clean
+
+\input{prologue.tex}
+\input{chapter-one.tex}
+%\input{chapter-two.tex}
+%\input{chapter-three.tex}
+%\input{chapter-four.tex} 
+
+\let\cleardoublepage\clearpage
+\backmatter
+
+\input{backmatter.tex} 
+
+\end{document}
