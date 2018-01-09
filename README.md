@@ -40,3 +40,16 @@ Use [Calibre](https://calibre-ebook.com/) to import the main.html and add metada
 
 Import .epub into [Sigil](https://github.com/Sigil-Ebook/Sigil) and smooth out converting issues to make the document look as you wish. You can also edit metadata and add content at this stage. Save and publish!
 
+## Epub check
+When submitting an `.epub` file to any service like Amazon, Google Play, Smashwords, etc; they all require that the .epub pass an epub check with this [epubchecker](https://github.com/IDPF/epubcheck).
+
+To run locally, one must have java installed on your system
+```
+$ java -jar ~/Downloads/epubcheck-4.0.2/epubcheck.jar book.epub 
+Validating using EPUB version 2.0.1 rules.
+No errors or warnings detected.
+epubcheck completed
+```
+
+Then you are ready to upload and publish your ebook file! If there are any errors, I find it easiest to correct them with [Sigil](https://github.com/Sigil-Ebook/Sigil)
+
