@@ -2,7 +2,7 @@
 
 Everything I have learned for formatting a novel with LaTeX. LaTeX is generally used for formatting manuals and scientific text books, but it can be adapted to provide a professional typesetting and formatting environment for fiction novels.  
 
-Please just use this as a framework and reference, I am still very new to LaTeX so there could be many things that I am not doing entirely correctly.  
+Please use this as a framework and reference, I am still very new to LaTeX so there could be many things that I am not doing entirely correctly.  
 
 I made all of this on a machine with Ubuntu 16.04, but I believe all software detailed is supported on Linux, Mac OS, and Windows.
 
@@ -38,7 +38,7 @@ Install `sudo apt install tex4ht` for html latex support.
 
 Use [Calibre](https://calibre-ebook.com/) to import the main.html and add metadata, bookcover, and convert to .epub. Save .epub to disk.
 
-Import .epub into [Sigil](https://github.com/Sigil-Ebook/Sigil) and smooth out converting issues to make the document look as you wish. You can also edit metadata and add content at this stage. Save and publish!
+Import .epub into [Sigil](https://github.com/Sigil-Ebook/Sigil) and smooth out converting issues to make the document look as you wish. I often find that all the frontmatter and backmatter gets squished into a single "page" which makes it appear clumsy and less professional. I spend a lot of time at this stage adding pagebreaks and centering text to match the paperback/PDF edition that was lost during the conversion stages. You can also edit metadata and add content at this stage. Save, Run Epubcheck, and publish!
 
 ## Epub check
 When submitting an `.epub` file to any service like Amazon, Google Play, Smashwords, etc; they all require that the .epub pass an epub check with this [epubchecker](https://github.com/IDPF/epubcheck).
@@ -51,5 +51,5 @@ No errors or warnings detected.
 epubcheck completed
 ```
 
-Then you are ready to upload and publish your ebook file! If there are any errors, I find it easiest to correct them with [Sigil](https://github.com/Sigil-Ebook/Sigil)
+Then you are ready to upload and publish your ebook file! If there are any errors, I find it easiest to correct them with [Sigil](https://github.com/Sigil-Ebook/Sigil).
 
